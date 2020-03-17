@@ -1,7 +1,9 @@
-import { flatten, zip } from './util';
-import updateBlockquote from './blockquoteTokens';
+const { flatten, zip } = require('./util');
+const updateBlockquote = require('./blockquoteTokens');
 
-export default function markdownItAttribution(md, options) {
+
+
+module.exports = function markdownItAttribution(md, options) {
   const attributionPrefix = (options && options.attributionPrefix) || '--';
   let Token;
 

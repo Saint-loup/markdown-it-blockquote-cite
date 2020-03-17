@@ -1,6 +1,6 @@
-import { flatten } from './util';
+const { flatten } = require('./util');
 
-export default function blockquoteTokens(tokens, Token, attributionPrefix) {
+module.exports = function blockquoteTokens(tokens, Token, attributionPrefix) {
   const { baseLevel } = tokens[0];
   const quoteLines = tokens
     .filter((token) => token.type === 'inline')
